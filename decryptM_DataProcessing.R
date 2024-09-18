@@ -411,7 +411,7 @@ curves_forplotting <- curves %>% dplyr::select(c("Site sequence context_15AA",Ge
 
 
 
-################# The following code generates the input table for PTMNavigator, generating the plot for Fig. 5c
+################# The following code generates the input table for PTMNavigator, generating the plot for Fig. 5d
 
 # Filter for GEM-only and combi-regulation. Select columns and remove missing values in GEM_pvalue
 PTMnavigator <- curves %>% ungroup %>% dplyr::filter(combi_sign %in% c("GEMreg_ATRireg","GEMreg_ATRinot")) %>% 
@@ -439,3 +439,4 @@ PTMnavigator$`P Value` <- 10^(-as.numeric(PTMnavigator$`P Value`))
 
 # The created file can be found in Zenodo (decryptM/PTMnavigator_input; see README)
 # RUN PTMNAVIGATOR https://www.proteomicsdb.org/analytics/ptmNavigator
+# Version run: https://github.com/wilhelm-lab/proteomicsdb-vue, commit hash f703b98
